@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: paapahid <paapahid@student.42madrid.c      +#+  +:+       +#+        */
+/*   By: pavelapahidean <pavelapahidean@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/11 20:34:28 by paapahid          #+#    #+#             */
-/*   Updated: 2025/10/11 21:22:01 by paapahid         ###   ########.fr       */
+/*   Updated: 2025/10/13 19:19:52 by pavelapahid      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ int	ft_atoi(char *str)
 	return (result * sign);
 }
 
+/*
 int	main(int argc, char *argv[])
 {
 	if (argc != 2)
@@ -48,3 +49,4 @@ int	main(int argc, char *argv[])
 	printf ("%d", ft_atoi(argv[1]));
 	return (0);
 }
+*/

@@ -1,30 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: paapahid <paapahid@student.42.fr>          +#+  +:+       +#+        */
+/*   By: pavelapahidean <pavelapahidean@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/11 19:33:53 by paapahid          #+#    #+#             */
-/*   Updated: 2025/10/11 21:21:05 by paapahid         ###   ########.fr       */
+/*   Created: 2025/10/11 19:02:40 by paapahid          #+#    #+#             */
+/*   Updated: 2025/10/14 11:51:41 by pavelapahid      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int	strlcat(char *dst, const char *src, size_t size)
+void	ft_bzero(void *s, size_t n)
 {
-	unsigned int	i;
-	unsigned int	j;
-	unsigned int	size_dst;
-	unsigned int	size_src;
+	size_t			i;
+	unsigned char	*z;
 
+	z = s;
 	i = 0;
-	j = 0;
-	while (dst[j] != '\0')
 	{
-		j++;
+		while (i < n)
+		{
+			z[i] = '\0';
+			i++;
+		}
 	}
-	size_dst = j;
-	while (*str || ((j + i) < size))
+	return ;
 }
+
+/*
+int	main(void)
+{
+	char	buffer[10] = "Hola123";
+
+	ft_bzero (buffer, 4);
+	for (int i = 0; i < 10; i++)
+		printf("%d ", buffer[i]);
+	return (0);
+}
+*/
