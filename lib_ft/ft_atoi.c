@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pavelapahidean <pavelapahidean@student.    +#+  +:+       +#+        */
+/*   By: paapahid <paapahid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/11 20:34:28 by paapahid          #+#    #+#             */
-/*   Updated: 2025/10/13 19:19:52 by pavelapahid      ###   ########.fr       */
+/*   Updated: 2025/10/14 12:49:03 by paapahid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

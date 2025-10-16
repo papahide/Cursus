@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pavelapahidean <pavelapahidean@student.    +#+  +:+       +#+        */
+/*   By: paapahid <paapahid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/11 19:02:40 by paapahid          #+#    #+#             */
-/*   Updated: 2025/10/14 11:51:41 by pavelapahid      ###   ########.fr       */
+/*   Updated: 2025/10/14 12:49:12 by paapahid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

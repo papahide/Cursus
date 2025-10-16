@@ -1,29 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: paapahid <paapahid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/11 19:46:16 by paapahid          #+#    #+#             */
-/*   Updated: 2025/10/14 12:49:45 by paapahid         ###   ########.fr       */
+/*   Created: 2025/10/16 22:36:09 by paapahid          #+#    #+#             */
+/*   Updated: 2025/10/16 22:47:30 by paapahid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
-
-int	ft_toupper(int c)
+int	memcmp(const void *s1, const void *s2, size_t n)
 {
-	if (c >= 97 && c <= 122)
-		return (c - 32);
+	unsigned char	*str1;
+	unsigned char	*str2;
+	size_t			i;
+
+	i = 0;
+	str1 = (unsigned char *)s1;
+	str2 = (unsigned char *)s2;
+	while ((i != n) && (str1[i] == str2[i]))
+	{
+		i++;
+	}
+	if (i == n)
+		return (0);
 	else
-		return (c);
+		return (str1[i] - str2[i]);
 }
-
-/*
-int	main ()
-{
-
-	printf("%d", ft_toupper(98));
-}
-*/

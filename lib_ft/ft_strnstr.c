@@ -1,29 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: paapahid <paapahid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/11 19:46:16 by paapahid          #+#    #+#             */
-/*   Updated: 2025/10/14 12:49:45 by paapahid         ###   ########.fr       */
+/*   Created: 2025/10/16 22:58:54 by paapahid          #+#    #+#             */
+/*   Updated: 2025/10/16 23:21:10 by paapahid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
-
-int	ft_toupper(int c)
+int	ft_strlen(char *str)
 {
-	if (c >= 97 && c <= 122)
-		return (c - 32);
-	else
-		return (c);
+	int	i;
+
+	i = 0;
+	while (str[i])
+	{
+		i++;
+	}
+	return (i);
 }
 
-/*
-int	main ()
+char	*strnstr(const char *h, const char *n, size_t l)
 {
+	size_t	i;
+	size_t	j;
 
-	printf("%d", ft_toupper(98));
+	i = 0;
+	if (n[0] == '\0')
+		return (h);
+	while (i < l)
+	{
+		j = 0;
+		while (n[j] && ((i + j) != l) && (h[i + j] == n[j]))
+		{
+			j++;
+		}
+		if (n[j] == '\0')
+			return (&h[i]);
+		i++;
+	}
+	return (NULL);
 }
-*/

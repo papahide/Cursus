@@ -1,29 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: paapahid <paapahid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/11 19:46:16 by paapahid          #+#    #+#             */
-/*   Updated: 2025/10/14 12:49:45 by paapahid         ###   ########.fr       */
+/*   Created: 2025/10/16 22:05:09 by paapahid          #+#    #+#             */
+/*   Updated: 2025/10/16 22:23:27 by paapahid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
-
-int	ft_toupper(int c)
+char	*ft_strrchr(const char *s, int c)
 {
-	if (c >= 97 && c <= 122)
-		return (c - 32);
+	unsigned char	j;
+	unsigned int	i;
+	unsigned int	l;
+
+	j = (unsigned char)c;
+	i = 0;
+	l = 0;
+	while (s[i] != '\0')
+	{
+		if (s[i] == j)
+			l = i;
+		i++;
+	}
+	if (s[i] == '\0' && s[l] == j)
+		return (&s[l]);
+	else if (j == '\0')
+		return (&s[i]);
 	else
-		return (c);
+		return (NULL);
 }
-
-/*
-int	main ()
-{
-
-	printf("%d", ft_toupper(98));
-}
-*/

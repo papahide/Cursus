@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pavelapahidean <pavelapahidean@student.    +#+  +:+       +#+        */
+/*   By: paapahid <paapahid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/11 19:33:53 by paapahid          #+#    #+#             */
-/*   Updated: 2025/10/14 11:39:00 by pavelapahid      ###   ########.fr       */
+/*   Updated: 2025/10/16 19:28:14 by paapahid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

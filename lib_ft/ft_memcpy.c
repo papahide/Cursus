@@ -1,37 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: paapahid <paapahid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/11 17:59:23 by paapahid          #+#    #+#             */
-/*   Updated: 2025/10/14 12:49:30 by paapahid         ###   ########.fr       */
+/*   Created: 2025/10/14 12:39:52 by pavelapahid       #+#    #+#             */
+/*   Updated: 2025/10/16 19:07:30 by paapahid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
+#include <string.h>
+#include <stdio.h>
 
-int	ft_isascii(char *str)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	int	i;
+	size_t			i;
+	unsigned char	*d;
+	unsigned char	*s;
 
 	i = 0;
-	while (str[i] != '\0')
+	d = (unsigned char *)dest;
+	s = (unsigned char *)src;
+	while (i < n)
 	{
-		if (str[i] >= 36 && str[i] <= 126)
-			return (1);
+		d[i] = s[i];
 		i++;
 	}
-	return (0);
+	return (dest);
 }
 
 /*
-int	main(int argc, char *argv[])
+int main(void)
 {
-	if (argc == 2)
-		printf("%d", ft_isascii(argv[1]));
-	else
-		return (0);
+	char src[10] = "abcdef";
+	char dst1[10];
+	char dst2[10];
+
+	ft_memcpy(dst1, src, 4);
+	memcpy(dst2, src, 4);
+
+	printf("ft_memcpy: %s\n", dst1);
+	printf("memcpy   : %s\n", dst2);
 }
 */
