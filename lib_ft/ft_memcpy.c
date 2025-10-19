@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: paapahid <paapahid@student.42.fr>          +#+  +:+       +#+        */
+/*   By: paapahid <paapahid@student.42madrid.c>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 12:39:52 by pavelapahid       #+#    #+#             */
-/*   Updated: 2025/10/16 19:07:30 by paapahid         ###   ########.fr       */
+/*   Updated: 2025/10/17 17:47:40 by paapahid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {

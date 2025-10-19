@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: paapahid <paapahid@student.42.fr>          +#+  +:+       +#+        */
+/*   By: paapahid <paapahid@student.42madrid.c>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/11 20:12:53 by paapahid          #+#    #+#             */
-/*   Updated: 2025/10/14 12:49:44 by paapahid         ###   ########.fr       */
+/*   Updated: 2025/10/19 20:16:49 by paapahid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
+#include "libft.h"
 
-int	ft_toupper(int c)
+int	ft_tolower(int c)
 {
-	if (c >= 97 && c <= 122)
+	if (c >= 'A' && c <= 'Z')
 		return (c + 32);
 	else
 		return (c);

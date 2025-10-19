@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: paapahid <paapahid@student.42.fr>          +#+  +:+       +#+        */
+/*   By: paapahid <paapahid@student.42madrid.c>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/11 15:40:14 by paapahid          #+#    #+#             */
-/*   Updated: 2025/10/14 12:49:24 by paapahid         ###   ########.fr       */
+/*   Updated: 2025/10/17 17:47:29 by paapahid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
+#include "libft.h"
 
-int	ft_isalpha(char *str)
+int	ft_isdigit(char *str)
 {
 	int	i;
 

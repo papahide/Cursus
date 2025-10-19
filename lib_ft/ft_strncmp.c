@@ -3,14 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: paapahid <paapahid@student.42.fr>          +#+  +:+       +#+        */
+/*   By: paapahid <paapahid@student.42madrid.c>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/11 21:12:47 by paapahid          #+#    #+#             */
-/*   Updated: 2025/10/16 22:57:32 by paapahid         ###   ########.fr       */
+/*   Updated: 2025/10/17 17:48:19 by paapahid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	strncmp(const char *s1, const char *s2, size_t n)
+#include "libft.h"
+
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	unsigned char	*str1;
 	unsigned char	*str2;

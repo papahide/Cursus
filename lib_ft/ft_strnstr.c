@@ -3,26 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: paapahid <paapahid@student.42.fr>          +#+  +:+       +#+        */
+/*   By: paapahid <paapahid@student.42madrid.c>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 22:58:54 by paapahid          #+#    #+#             */
-/*   Updated: 2025/10/16 23:21:10 by paapahid         ###   ########.fr       */
+/*   Updated: 2025/10/17 17:48:22 by paapahid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
-{
-	int	i;
+#include "libft.h"
 
-	i = 0;
-	while (str[i])
-	{
-		i++;
-	}
-	return (i);
-}
-
-char	*strnstr(const char *h, const char *n, size_t l)
+char	*ft_strnstr(char *h, char *n, size_t l)
 {
 	size_t	i;
 	size_t	j;

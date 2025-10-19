@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: paapahid <paapahid@student.42.fr>          +#+  +:+       +#+        */
+/*   By: paapahid <paapahid@student.42madrid.c>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 22:05:09 by paapahid          #+#    #+#             */
-/*   Updated: 2025/10/16 22:23:27 by paapahid         ###   ########.fr       */
+/*   Updated: 2025/10/17 17:48:26 by paapahid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {
@@ -26,9 +28,9 @@ char	*ft_strrchr(const char *s, int c)
 		i++;
 	}
 	if (s[i] == '\0' && s[l] == j)
-		return (&s[l]);
+		return ((char *)&s[l]);
 	else if (j == '\0')
-		return (&s[i]);
+		return ((char *)&s[i]);
 	else
 		return (NULL);
 }
