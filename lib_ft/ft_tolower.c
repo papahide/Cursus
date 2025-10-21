@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: paapahid <paapahid@student.42madrid.c>     +#+  +:+       +#+        */
+/*   By: paapahid <paapahid@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/11 20:12:53 by paapahid          #+#    #+#             */
-/*   Updated: 2025/10/19 20:16:49 by paapahid         ###   ########.fr       */
+/*   Created: 2025/10/21 15:40:15 by paapahid          #+#    #+#             */
+/*   Updated: 2025/10/21 15:40:17 by paapahid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

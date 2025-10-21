@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: paapahid <paapahid@student.42madrid.c>     +#+  +:+       +#+        */
+/*   By: paapahid <paapahid@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/19 18:12:12 by paapahid          #+#    #+#             */
-/*   Updated: 2025/10/19 18:38:19 by paapahid         ###   ########.fr       */
+/*   Created: 2025/10/21 15:34:16 by paapahid          #+#    #+#             */
+/*   Updated: 2025/10/21 15:34:18 by paapahid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

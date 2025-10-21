@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: paapahid <paapahid@student.42madrid.c>     +#+  +:+       +#+        */
+/*   By: paapahid <paapahid@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/14 12:39:52 by pavelapahid       #+#    #+#             */
-/*   Updated: 2025/10/17 17:47:40 by paapahid         ###   ########.fr       */
+/*   Created: 2025/10/21 15:37:07 by paapahid          #+#    #+#             */
+/*   Updated: 2025/10/21 15:37:09 by paapahid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

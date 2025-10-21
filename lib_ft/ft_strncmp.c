@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: paapahid <paapahid@student.42madrid.c>     +#+  +:+       +#+        */
+/*   By: paapahid <paapahid@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/11 21:12:47 by paapahid          #+#    #+#             */
-/*   Updated: 2025/10/17 17:48:19 by paapahid         ###   ########.fr       */
+/*   Created: 2025/10/21 15:39:11 by paapahid          #+#    #+#             */
+/*   Updated: 2025/10/21 15:39:12 by paapahid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

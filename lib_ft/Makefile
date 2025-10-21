@@ -6,7 +6,7 @@
 #    By: paapahid <paapahid@student.42madrid.c>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/19 17:59:57 by paapahid          #+#    #+#              #
-#    Updated: 2025/10/19 18:57:44 by paapahid         ###   ########.fr        #
+#    Updated: 2025/10/21 15:03:31 by paapahid         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,11 @@ FILES = ft_atoi.c \
 		ft_toupper.c \
 		ft_tolower.c \
 		ft_calloc.c \
-		ft_strdup.c
+		ft_strdup.c \
+		ft_substr.c \
+		ft_strjoin.c \
+		ft_strtrim.c \
+		ft_split.c
 
 OBJS = $(FILES:.c=.o)
 
@@ -55,5 +59,7 @@ clean:
 
 fclean: clean
 	rm -f $(NAME)
+
+re: fclean all
 
 .PHONY: all clean fclean

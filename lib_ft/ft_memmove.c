@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: paapahid <paapahid@student.42madrid.c>     +#+  +:+       +#+        */
+/*   By: paapahid <paapahid@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/14 15:24:00 by paapahid          #+#    #+#             */
-/*   Updated: 2025/10/17 17:47:44 by paapahid         ###   ########.fr       */
+/*   Created: 2025/10/21 15:37:22 by paapahid          #+#    #+#             */
+/*   Updated: 2025/10/21 15:37:24 by paapahid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: paapahid <paapahid@student.42madrid.c>     +#+  +:+       +#+        */
+/*   By: paapahid <paapahid@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/14 19:33:51 by paapahid          #+#    #+#             */
-/*   Updated: 2025/10/17 17:47:50 by paapahid         ###   ########.fr       */
+/*   Created: 2025/10/21 15:36:06 by paapahid          #+#    #+#             */
+/*   Updated: 2025/10/21 15:36:08 by paapahid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: paapahid <paapahid@student.42madrid.c>     +#+  +:+       +#+        */
+/*   By: paapahid <paapahid@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/16 22:36:09 by paapahid          #+#    #+#             */
-/*   Updated: 2025/10/17 17:47:37 by paapahid         ###   ########.fr       */
+/*   Created: 2025/10/21 15:36:54 by paapahid          #+#    #+#             */
+/*   Updated: 2025/10/21 15:36:55 by paapahid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

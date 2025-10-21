@@ -3,27 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: paapahid <paapahid@student.42madrid.c>     +#+  +:+       +#+        */
+/*   By: paapahid <paapahid@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/11 16:10:20 by paapahid          #+#    #+#             */
-/*   Updated: 2025/10/17 17:47:24 by paapahid         ###   ########.fr       */
+/*   Created: 2025/10/21 15:35:07 by paapahid          #+#    #+#             */
+/*   Updated: 2025/10/21 15:35:08 by paapahid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isascii(char *str)
+int	ft_isascii(int c)
 {
-	int	i;
+	char	asc;
 
-	i = 0;
-	while (str[i] != '\0')
-	{
-		if (str[i] >= 0 && str[i] <= 127)
-			return (1);
-		i++;
-	}
-	return (0);
+	asc = (char)c;
+	if (asc >= 0 && asc <= 127)
+		return (1);
+	else
+		return (0);
 }
 
 /*

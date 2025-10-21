@@ -1,35 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: paapahid <paapahid@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/21 15:38:55 by paapahid          #+#    #+#             */
-/*   Updated: 2025/10/21 15:38:57 by paapahid         ###   ########.fr       */
+/*   Created: 2025/10/21 16:40:03 by paapahid          #+#    #+#             */
+/*   Updated: 2025/10/21 16:40:07 by paapahid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t	i;
+	char		*sub;
+	size_t		i;
 
+	if (!s)
+		return (NULL);
+	i = ft_strlen(s);
+	if (start >= i || len == 0)
+		return (ft_strdup(""));
 	i = 0;
-	while (str[i] != '\0')
+	if (len > ft_strlen(s) - start)
+		len = ft_strlen(s) - start;
+	sub = malloc((len + 1) * sizeof(char));
+	if (!sub)
+		return (NULL);
+	while (s[start] && i < len)
 	{
+		sub[i] = s[start];
 		i++;
+		start++;
 	}
-	return (i);
+	sub[i] = '\0';
+	return (sub);
 }
-
-/*
-int	main(int argc, char *argv[])
-{
-	if (argc == 2)
-		printf("%d", ft_strlen(argv[1]));
-	else
-		return (0);
-}
-*/

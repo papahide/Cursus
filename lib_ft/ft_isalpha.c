@@ -3,28 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: paapahid <paapahid@student.42madrid.c>     +#+  +:+       +#+        */
+/*   By: paapahid <paapahid@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/11 15:04:05 by paapahid          #+#    #+#             */
-/*   Updated: 2025/10/19 20:32:50 by paapahid         ###   ########.fr       */
+/*   Created: 2025/10/21 15:34:50 by paapahid          #+#    #+#             */
+/*   Updated: 2025/10/21 15:34:52 by paapahid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(char *str)
+int	ft_isalpha(int c)
 {
-	int	i;
+	char	ch;
 
-	i = 0;
-	while (str[i] != '\0')
-	{
-		if (!((str[i] >= 'a' && str[i] <= 'z')
-				|| (str[i] <= 'Z' && str[i] >= 'A')))
-			return (0);
-		i++;
-	}
-	return (1);
+	ch = (char)c;
+	if ((ch >= 'a' && ch <= 'z') || (ch <= 'Z' && ch >= 'A'))
+		return (1);
+	else
+		return (0);
 }
 
 /*
