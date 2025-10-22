@@ -14,21 +14,8 @@
 
 int	ft_isprint(int c)
 {
-	char	p;
-
-	p = (char)c;
-	if (p >= 32 && p <= 126)
+	if (c >= 32 && c <= 126)
 		return (1);
 	else
 		return (0);
 }
-
-/*
-int	main(int argc, char *argv[])
-{
-	if (argc == 2)
-		printf("%d", ft_isascii(argv[1]));
-	else
-		return (0);
-}
-*/

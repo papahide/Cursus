@@ -28,15 +28,3 @@ void	ft_bzero(void *s, size_t n)
 	}
 	return ;
 }
-
-/*
-int	main(void)
-{
-	char	buffer[10] = "Hola123";
-
-	ft_bzero (buffer, 4);
-	for (int i = 0; i < 10; i++)
-		printf("%d ", buffer[i]);
-	return (0);
-}
-*/

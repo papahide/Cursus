@@ -23,13 +23,3 @@ size_t	ft_strlen(const char *str)
 	}
 	return (i);
 }
-
-/*
-int	main(int argc, char *argv[])
-{
-	if (argc == 2)
-		printf("%d", ft_strlen(argv[1]));
-	else
-		return (0);
-}
-*/

@@ -14,21 +14,8 @@
 
 int	ft_isascii(int c)
 {
-	char	asc;
-
-	asc = (char)c;
-	if (asc >= 0 && asc <= 127)
+	if (c >= 0 && c <= 127)
 		return (1);
 	else
 		return (0);
 }
-
-/*
-int	main(int argc, char *argv[])
-{
-	if (argc == 2)
-		printf("%d", ft_isascii(argv[1]));
-	else
-		return (0);
-}
-*/

@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int	w_count(const char *s, char c)
+static int	w_count(const char *s, char c)
 {
 	int	i;
 	int	n;
@@ -36,7 +36,7 @@ int	w_count(const char *s, char c)
 	return (n);
 }
 
-size_t	w_len(const char *s, char c)
+static size_t	w_len(const char *s, char c)
 {
 	int	i;
 
@@ -48,19 +48,7 @@ size_t	w_len(const char *s, char c)
 	return (i);
 }
 
-int	get_start(const char *s, char c)
-{
-	int	i;
-
-	i = 0;
-	while (s[i] && s[i] == c)
-	{
-		i++;
-	}
-	return (i);
-}
-
-char	**ft_freemem(char **s, int i)
+static char	**ft_freemem(char **s, int i)
 {
 	int	j;
 
@@ -68,9 +56,11 @@ char	**ft_freemem(char **s, int i)
 	while (j < i)
 	{
 		free(s[j]);
+		s[j] = NULL;
 		j++;
 	}
 	free(s);
+	s = NULL;
 	return (NULL);
 }
 

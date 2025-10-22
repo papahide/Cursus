@@ -36,16 +36,3 @@ int	ft_atoi(const char *str)
 	}
 	return (result * sign);
 }
-
-/*
-int	main(int argc, char *argv[])
-{
-	if (argc != 2)
-	{
-		write(2, "Error\n", 6);
-		return (1);
-	}
-	printf ("%d", ft_atoi(argv[1]));
-	return (0);
-}
-*/

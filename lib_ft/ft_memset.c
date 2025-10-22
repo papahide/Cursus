@@ -26,21 +26,3 @@ void	*ft_memset(void *dest, int c, size_t n)
 	}
 	return (dest);
 }
-
-/*
-int	main(void)
-{
-	char	buffer[10];
-	char	*result;
-	int		i;
-
-	result = ft_memset(buffer, 'A', 10);
-	i = 0;
-	while (i < 10)
-	{
-		write(1, &result[i], 1);
-		i++;
-	}
-	return (0);
-}
-*/

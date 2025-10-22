@@ -14,21 +14,8 @@
 
 int	ft_isdigit(int c)
 {
-	char	dg;
-
-	dg = (char)c;
-	if (dg >= '0' && dg <= '9')
+	if (c >= '0' && c <= '9')
 		return (1);
 	else
 		return (0);
 }
-
-/*
-int     main (int argc, char *argv[])
-{
-        if (argc == 2)
-                printf("ft_isalpha: %d", ft_isalpha(argv[1]));
-        else
-                printf("%s", "error");
-}
-*/

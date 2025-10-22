@@ -19,11 +19,3 @@ int	ft_tolower(int c)
 	else
 		return (c);
 }
-
-/*
-int	main ()
-{
-
-	printf("%d", ft_toupper(98));
-}
-*/

@@ -19,13 +19,3 @@ int	ft_isalnum(int c)
 	else
 		return (0);
 }
-
-/*
-int     main (int argc, char *argv[])
-{
-        if (argc == 2)
-                printf("ft_isalpha: %d", ft_isalpha(argv[1]));
-        else
-                printf("%s", "error");
-}
-*/

@@ -27,13 +27,3 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 	dest[i] = '\0';
 	return (ft_strlen(src));
 }
-
-/*
-int	main(int argc, char *argv[])
-{
-	if (argc == 3)
-		printf("%d", ft_strlcpy(argv[1], argv[2], 5));
-	else
-		printf("error");
-}
-*/
