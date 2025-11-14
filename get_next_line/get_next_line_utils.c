@@ -12,46 +12,46 @@
 
 #include "get_next_line.h"
 
-static int	ft_strlen(char *str, char c)
+static size_t	ft_strlen(char *str, char c)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
-	if (!str) 
+	if (!str)
 		return (0);
 	while (str[i] && str[i] != c)
 		i++;
 	return (i);
 }
 
-char *ft_strdup(char *str, char c)
+static char	*ft_strdup(char *str, char c)
 {
 	char	*dup;
 	int		i;
-	int		size;
+	int		len;
 
 	if (!str)
 		return (NULL);
+	len = ft_strlen(str, c);
+	dup = malloc(len * sizeof(char) + 1);
+	if (!dup)
+		return (NULL);
 	i = 0;
-	size = ft_strlen(str, c);
-	dup = malloc(size * sizeof(char) + 1);
-	while (str[i] && str[i] != c)
+	while (i < len)
 	{
 		dup[i] = str[i];
 		i++;
 	}
 	dup[i] = '\0';
-	return(dup);
+	return (dup);
 }
 
 int	ft_complete_line(char *str)
 {
 	int	i;
-	int	j;
 
 	i = 0;
-	j = 0;
-	if (!str) 
+	if (!str)
 		return (0);
 	while (str[i])
 	{
@@ -59,61 +59,66 @@ int	ft_complete_line(char *str)
 			return (1);
 		i++;
 	}
-	if (j == 0)
-		return (0);
+	return (0);
 }
 
-char *ft_strjoin(char *s1, char *s2)
+char	*ft_strjoin(char *s1, char *s2)
 {
-	int		i;
-	int		j;
+	size_t	i;
+	size_t	j;
 	char	*joined;
 
 	i = 0;
 	j = 0;
 	joined = malloc(ft_strlen(s1, '\0') + ft_strlen(s2, '\0') + 1);
-	while (s1[i])
+	if (!joined)
+		return (NULL);
+	while (i < ft_strlen(s1, '\0'))
 	{
 		joined[i] = s1[i];
 		i++;
 	}
-	while (s2[j])
+	while (j < ft_strlen(s2, '\0'))
 	{
 		joined[i + j] = s2[j];
-		j++; 
+		j++;
 	}
 	joined[i + j] = '\0';
-	free(s1);
+	if (s1)
+		free(s1);
 	return (joined);
 }
 
-char *ft_getline(char *str)
+char	*ft_getline(char **str)
 {
 	char	*line;
 	char	*rest;
-	int		i;
+	size_t	len;
+	size_t	i;
 
 	i = 0;
-	line = malloc(ft_strlen(str, '\n') * sizeof(char) + 2);
-	while (str[i] != '\n')
+	len = ft_strlen(*str, '\n');
+	line = malloc(len + 2);
+	if (!line)
+		return (NULL);
+	while (i < len)
 	{
-		line[i] = str[i];
+		line[i] = (*str)[i];
 		i++;
 	}
-	line[i] = '\n';
-	i++;
+	if ((*str)[i] && (*str)[i] == '\n')
+	{
+		line[i] = '\n';
+		i++;
+	}
 	line[i] = '\0';
-	rest = ft_strdup(&str[i], '\0');
-	free(str);
-	return (line);
-}
-
-char *ft_newline(int fd)
-{
-	char	buffer[BUFFER_SIZE + 1];
-	char	*line;
-
-	if (!fd)
-    return (NULL);
+	rest = ft_strdup(*str + i, '\0');
+	free(*str);
+	*str = rest;
+	if (*str && **str == '\0')
+	{
+		free(*str);
+		*str = NULL;
+	}
 	return (line);
 }
