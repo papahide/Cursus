@@ -58,6 +58,6 @@ char	*get_next_line(int fd)
 		return (NULL);
 	}
 	line = NULL;
-	line = ft_getline(&rest);
+	line = ft_getline_gnl(&rest);
 	return (line);
 }

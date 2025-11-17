@@ -23,7 +23,7 @@
 
 char	*get_next_line(int fd);
 int		ft_complete_line(char *str);
-char	*ft_strjoin(char *s1, char *s2);
-char	*ft_getline(char **str);
+char	*ft_strjoin(char *s1, const char *s2);
+char	*ft_getline_gnl(char **str);
 
 #endif
