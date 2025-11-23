@@ -14,7 +14,7 @@
 # define GET_NEXT_LINE_H
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 42
+#  define BUFFER_SIZE 15
 # endif
 
 # include <stdio.h>
@@ -22,12 +22,11 @@
 # include <stdlib.h>
 
 char	*get_next_line(int fd);
-
+int		main(void);
 char	*ft_substr_gnl(char *str, unsigned int start, size_t len);
-size_t	ft_strlen_gnl(const char *str);
+int		ft_strlen_gnl(const char *str);
 char	*ft_strjoin_gnl(char *s1, const char *s2);
 char	*ft_strdup_gnl(char *str);
 char	*ft_freemem_gnl(char **str);
-
 
 #endif

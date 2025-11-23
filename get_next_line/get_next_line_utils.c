@@ -12,24 +12,14 @@
 
 #include "get_next_line.h"
 
-size_t	ft_strlen_gnl(const char *str)
-{
-	size_t	i;
-
-	i = 0;
-	if (!str)
-		return (0);
-	while (str[i])
-		i++;
-	return (i);
-}
-
 char	*ft_strdup_gnl(char *str)
 {
 	size_t	len;
+	size_t	i;
 	char	*dup;
-	int		i;
 
+	if (!str)
+		return (NULL);
 	len = ft_strlen_gnl(str);
 	dup = malloc(len * sizeof(char) + 1);
 	if (!dup)
@@ -41,14 +31,52 @@ char	*ft_strdup_gnl(char *str)
 		i++;
 	}
 	dup[i] = '\0';
-	free(str);
 	return (dup);
+}
+
+char	*ft_substr_gnl(char *str, unsigned int start, size_t len)
+{
+	char		*sub;
+	size_t		i;
+
+	if (!str)
+		return (NULL);
+	i = ft_strlen_gnl(str);
+	if (start >= i || len == 0)
+		return (ft_strdup_gnl(""));
+	i = 0;
+	if (len > ft_strlen_gnl(str) - start)
+		len = ft_strlen_gnl(str) - start;
+	sub = malloc((len + 1) * sizeof(char));
+	if (!sub)
+		return (NULL);
+	while (str[start] && i < len)
+	{
+		sub[i] = str[start];
+		i++;
+		start++;
+	}
+	sub[i] = '\0';
+	return (sub);
+}
+
+
+int	ft_strlen_gnl(const char *str)
+{
+	int	i;
+
+	i = 0;
+	if (!str)
+		return (0);
+	while (str[i])
+		i++;
+	return (i);
 }
 
 char	*ft_strjoin_gnl(char *s1, const char *s2)
 {
-	size_t	len1;
-	size_t	len2;
+	int		len1;
+	int		len2;
 	int		i;
 	int		j;
 	char	*str;
@@ -60,44 +88,12 @@ char	*ft_strjoin_gnl(char *s1, const char *s2)
 	str = malloc(len1 + len2 +1);
 	if (!str)
 		return (NULL);
-	while(s1[++i])
+	while (++i < len1)
 		str[i] = s1[i];
-	while(s2[++j])
-		str[i + j] = s2[j];
+	while (++j < len2)
+		str[j + i] = s2[j];
 	str[i + j] = '\0';
 	if (s1)
 		free(s1);
 	return (str);
 }
-
-char	*ft_substr_gnl(char *str, unsigned int start, size_t len)
-{
-	size_t	strlen;
-	char	*sub;
-	int		i;
-
-	i = 0;
-	strlen = ft_strlen_gnl(str);
-	if (!str || start >= len)
-		return (ft_strdup_gnl(""));
-	if (len > strlen - start)
-		len = strlen - start;
-	sub = malloc(len + 1);
-	if (!sub)
-		return (NULL);
-	while (i < len)
-	{
-		sub[i] = str[start + i];
-		i++;
-	}
-	sub[i] = '\0';
-	return (sub);
-}
-
-char *ft_freemem_gnl(char **str)
-{
-	free(str);
-	*str = NULL;
-	return (NULL);
-}
-
