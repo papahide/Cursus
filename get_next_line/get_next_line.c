@@ -79,7 +79,7 @@ static char	*ft_readfile_gnl(int fd, char *rest)
 
 	buffer = NULL;
 	bytes = 1;
-	while (bytes > 0 && !ft_strchr(rest, '\n'))
+	while ((bytes > 0) && (!ft_strchr(rest, '\n')))
 	{
 		buffer = malloc(BUFFER_SIZE + 1);
 		if (!buffer)
@@ -114,19 +114,14 @@ char	*get_next_line(int fd)
 	return (line);
 }
 
-// int	main(void)
-// {
-// 	int		fd;
-// 	char	*line;
-
-// 	fd = open("hola", O_RDONLY);
-// 	line = get_next_line(fd);
-// 	while (line)
-// 	{
-// 		printf("%s", line);
-// 		free(line);
-// 		line = get_next_line(fd);
-// 	}
-// 	close(fd);
-
-// }
+int main(void)
+{
+	int fd = open("gnlTester/files/big_line_no_nl", O_RDONLY);
+	char *line;
+	while ((line = get_next_line(fd)) != NULL)
+	{
+		printf("%s \n", line);
+		free(line);
+	}
+	close(fd);
+}

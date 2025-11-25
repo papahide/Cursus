@@ -60,7 +60,6 @@ char	*ft_substr_gnl(char *str, unsigned int start, size_t len)
 	return (sub);
 }
 
-
 int	ft_strlen_gnl(const char *str)
 {
 	int	i;
