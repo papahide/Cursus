@@ -62,10 +62,7 @@ static char	*ft_clean_rest(char *rest)
 		i++;
 	if (rest[i] == '\n')
 		i++;
-	if (rest[i] == '\0')
-		return (free(rest), NULL);
-	clean = malloc(j - i + 1);
-	if (!clean)
+	if (!rest[i])
 		return (free(rest), NULL);
 	clean = ft_substr_gnl(rest, i, j - i);
 	free(rest);
@@ -79,29 +76,30 @@ static char	*ft_readfile_gnl(int fd, char *rest)
 
 	buffer = NULL;
 	bytes = 1;
+	buffer = malloc(BUFFER_SIZE + 1);
+	if (!buffer)
+		return (NULL);
 	while ((bytes > 0) && (!ft_strchr(rest, '\n')))
 	{
-		buffer = malloc(BUFFER_SIZE + 1);
-		if (!buffer)
-			return (NULL);
 		bytes = read(fd, buffer, BUFFER_SIZE);
-		if (bytes <= 0)
+		if (bytes < 0)
 		{
-			free(buffer);
-			buffer = NULL;
+			ft_freemem_gnl(&rest);
 			break ;
 		}
+		else if (bytes == 0)
+			break ;
 		if (bytes >= 0 && bytes < BUFFER_SIZE + 1)
 			buffer[bytes] = '\0';
 		rest = ft_strjoin_gnl(rest, buffer);
-		free(buffer);
 	}
+	ft_freemem_gnl(&buffer);
 	return (rest);
 }
 
 char	*get_next_line(int fd)
 {
-	static char	*rest = NULL;
+	static char	*rest;
 	char		*line;
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
@@ -114,14 +112,24 @@ char	*get_next_line(int fd)
 	return (line);
 }
 
-int main(void)
-{
-	int fd = open("gnlTester/files/big_line_no_nl", O_RDONLY);
-	char *line;
-	while ((line = get_next_line(fd)) != NULL)
-	{
-		printf("%s \n", line);
-		free(line);
-	}
-	close(fd);
-}
+// int main(void)
+// {
+// 	int fd = open("/home/paapahid/francinette/tests/
+//					get_next_line/fsoares/read_error.txt", O_RDONLY);
+// 	char *line;
+// 	int	j;
+
+// 	j = 0;
+// 	while (j < 5)
+// 	{
+// 		printf("ITERACION: %d \n", j);
+// 		if (j == 2)
+// 			line = get_next_line(4);
+// 		else
+// 			line = get_next_line(fd);
+// 		printf("LINE: %s \n", line);
+// 		free(line);
+// 		j++;
+// 	}
+// 	close(fd);
+// }

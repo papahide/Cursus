@@ -96,3 +96,9 @@ char	*ft_strjoin_gnl(char *s1, const char *s2)
 		free(s1);
 	return (str);
 }
+
+void	ft_freemem_gnl(char **str)
+{
+	free(*str);
+	*str = NULL;
+}
