@@ -99,15 +99,15 @@ static char *ft_readfile_gnl(int fd, char *rest)
 
 char *get_next_line(int fd)
 {
-	static char *rest;
+	static char *rest[1024];
 	char *line;
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
-	rest = ft_readfile_gnl(fd, rest);
-	if (!rest)
+	rest[fd] = ft_readfile_gnl(fd, rest[fd]);
+	if (!rest[fd])
 		return (NULL);
-	line = ft_complete_line(rest);
-	rest = ft_clean_rest(rest);
+	line = ft_complete_line(rest[fd]);
+	rest[fd] = ft_clean_rest(rest[fd]);
 	return (line);
 }
